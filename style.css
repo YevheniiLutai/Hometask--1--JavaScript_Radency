@@ -98,8 +98,8 @@
 }
 
 .icon_random_thought {
-/*padding-top: 7px;
-padding-left: 7px;*/
+    display: flex;
+    
 }
 
 .icon_background {
@@ -107,7 +107,8 @@ padding-left: 7px;*/
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    
+    display: flex;
+    text-align: center;
 }
 .icon_item {
     /*margin-top: 10px;
@@ -142,8 +143,8 @@ table{
 
 .first_column {
     width: 6.25%;
-    margin-bottom: 3px;
-    
+    display: flex;
+    justify-content: center;
 }
 
 .second_column {
@@ -195,7 +196,8 @@ table{
 
 .first_column_list {
     width: 6.25%;
-    margin-bottom: 3px; 
+    display: flex;
+    justify-content: center;
 }
 
 .second_column_list {
