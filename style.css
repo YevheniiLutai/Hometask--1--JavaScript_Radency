@@ -1,0 +1,218 @@
+/*******************Font********************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+/*******************************************/
+/*************************************/
+.container {
+    height: 60px;
+    width: 1000px;
+}
+
+.notes {
+    height: 40px;
+    width: 1000px;
+    background-color: rgb(153,153,153);
+    color:white;
+    font-weight: 600;
+    font-size: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.note {
+    margin-top: 15px;
+    height: 50px;
+    width: 1000px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgb(232,234,245);
+    color: rgb(153,153,153);
+    font-weight: 600;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.list_of_notes {
+    height: 40px;
+    width: 1000px;
+    font-weight: 600;
+    font-size: 22px;
+    color: #616161;
+    background-color: rgb(153,153,153);
+    color:white;
+    font-weight: 600;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.note_archived {
+    color: black;
+    margin-top: 15px;
+    height: 50px;
+    width: 1000px;
+    font-weight: 600;
+    font-size: 22px;
+    background-color: rgb(232,234,245);
+    align-items: center;
+    font-weight: 600;
+    border-radius: 4px;
+    display: flex;
+}
+
+.sorted_notes {
+    margin-top: 50px;
+}
+
+.name {
+    color: #282728;
+}
+/*******************************************/
+/*******************Icons*******************/
+.icon_archive {
+    fill:white;
+}
+
+.icon_delete {
+    fill: white;
+}
+
+.icon_archive_2 {
+    margin-right: 10px;
+}
+
+.icon_delete_2 {
+    margin-right: 10px;
+}
+
+.note_icon {
+    margin-right: 10px;
+    height: 27px;
+    width: 27px;
+}
+
+.icon_random_thought {
+/*padding-top: 7px;
+padding-left: 7px;*/
+}
+
+.icon_background {
+    background-color: #616161;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+.icon_item {
+    /*margin-top: 10px;
+    margin-left: 9px; */
+
+}
+.icon_quote {
+    /*padding-top: 10px;
+    padding-left: 10px; */
+}
+.icon_idea {
+    /*padding-top: 5px;
+    padding-left: 5px;*/ 
+}
+/*********************************************/
+
+/*******************Buttons*******************/
+.button_setting {
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+/*********************************************/
+
+/********************Table********************/
+/*********************************************/
+table{  
+    width: 100%;
+     
+}  
+
+.first_column {
+    width: 6.25%;
+    margin-bottom: 3px;
+    
+}
+
+.second_column {
+    width: 18.75%;
+    text-align: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+}
+
+.third_column {
+    width: 15.625%;
+    text-align: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+}
+
+.fourth_column {
+    width: 15.625%;
+    text-align: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+}
+
+.fifth_column {
+    width: 15.625%;
+    text-align: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+}
+
+.sixth_column {
+    width: 18.75%;
+    text-align: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+}
+
+.seventh_column {
+    display: flex;
+    justify-content: flex-end;
+    width: 9.375%;
+    
+}
+
+.first_column_list {
+    width: 6.25%;
+    margin-bottom: 3px; 
+}
+
+.second_column_list {
+    width: 40.625%;
+    text-align: left;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+}
+
+.third_column_list {
+    width: 18.75%;
+    text-align: left;
+}
+
+.fourth_column_list {
+    width: 34.375%;
+    text-align: left;
+}
+/*********************************************/

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Hometask #1  JavaScript_Radency</title>
+</head>
+<body>
+   <!-- <div class="container">
+        <div class="notes">
+            Name
+            Created
+            Category
+            Content
+            Dates
+            <img src="img/download-button_2.svg" alt="atchive" class="icon_archive_2">
+            <img src="img/delete_2.svg" alt="delete" class="icon_delete_2">
+        </div>
+        <div class="note">
+            <div class="icon_background">
+                <img src="img/mind-settings.svg" alt="atchive" class="icon_random_thought">
+            </div>
+            <div class="note_name"></div>
+            <div class="note_created"></div>
+            <div class="note_category"></div>
+            <div class="note_content"></div>
+            <div class="note_dates"></div>
+            <img src="img/download-button.svg" alt="atchive" class="note_icon">
+            <img src="img/delete.svg" alt="delete" class="note_icon">
+            <img src="img/edit.svg" alt="edit" class="note_icon">
+        </div>
+        <button class="creat_button">Creat notes</button>
+      
+        <div class="list_of_notes">
+          
+            Note category
+            Active
+            Archived
+            <div class="icon_background">
+                <img src="img/cart.svg" alt="atchive" class="icon_item">
+            </div>
+            <div class="icon_background">
+                <img src="img/idea.svg" alt="atchive" class="icon_idea">
+            </div>
+            <div class="icon_background">
+                <img src="img/right-quote-sign.svg" alt="atchive" class="icon_quote">
+            </div>  
+        </div>
+        <div class="note_archived">
+            <div class="icon_background">
+                <img src="img/mind-settings.svg" alt="atchive" class="icon_random_thought">
+            </div>
+            Task
+        </div>
+    </div>  -->
+    <table>
+        <tr class="list_of_notes">
+            <th class="first_column"></th>
+            <th class="second_column">Name</th>
+            <th class="third_column">Created</th>
+            <th class="fourth_column">Category</th>
+            <th class="fifth_column">Content</th>
+            <th class="sixth_column">Dates</th>
+            <th class="seventh_column">  
+                <img src="img/download-button_2.svg" alt="atchive" class="icon_archive_2">
+                <img src="img/delete_2.svg" alt="delete" class="icon_delete_2">
+            </th>
+        </tr>
+        <tr class="note">
+            <td class="first_column">
+                <img src="img/cart.svg" alt="atchive" class="icon_background icon_item ">
+            </td>
+            <td class="name second_column">Shopping list</td>
+            <td class="third_column">April 20, 2021</td>
+            <td class="fourth_column">Task</td>
+            <td class="fifth_column">Tamotes, bread</td>
+            <td class="sixth_column"></td>
+            <td class="seventh_column">
+                <img src="img/edit.svg" alt="edit" class="note_icon" id="button_edit"> 
+                <img src="img/download-button.svg" alt="atchive" class="note_icon" id="button_archive">
+                <img src="img/delete.svg" alt="delete" class="note_icon" id="button_delete">
+            </td>
+        </tr>
+        <tr class="note">
+            <td class="first_column"><img src="img/mind-settings.svg" alt="atchive" class="icon_background icon_random_thought"></td>
+            <td class="name second_column">The theory of evolut</td>
+            <td class="third_column">April 27, 2021</td>
+            <td class="fourth_column">Random thought</td>
+            <td class="fifth_column">The evolution was something text</td>
+            <td class="sixth_column"></td>
+            <td class="seventh_column"> 
+                <img src="img/download-button.svg" alt="atchive" class="note_icon" id="button_archive">
+                <img src="img/delete.svg" alt="delete" class="note_icon" id="button_delete">
+                <img src="img/edit.svg" alt="edit" class="note_icon" id="button_edit">
+            </td>
+        </tr>
+        <tr class="note">
+            <td class="first_column"> <img src="img/idea.svg" alt="atchive" class="icon_background icon_idea"></td>
+            <td class="name second_column">New Feature</td>
+            <td class="third_column">May 05, 2021</td>
+            <td class="fourth_column">Idea</td>
+            <td class="fifth_column">Implement new idea to other project</td>
+            <td class="sixth_column">3/5/2021,5/5/2021</td>
+            <td class="seventh_column"> 
+                <img src="img/download-button.svg" alt="atchive" class="note_icon" id="button_archive">
+                <img src="img/delete.svg" alt="delete" class="note_icon" id="button_delete">
+                <img src="img/edit.svg" alt="edit" class="note_icon" id="button_edit">
+            </td>
+        </tr>
+        <tr class="note">
+            <td class="first_column"><img src="img/right-quote-sign.svg" alt="atchive" class="icon_background icon_quote"></td>
+            <td class="name second_column">William Gaddis</td>
+            <td class="third_column">May 07, 2021</td>
+            <td class="fourth_column">Quote</td>
+            <td class="fifth_column">Power doesn't co...</td>
+            <td class="sixth_column"></td>
+            <td class="seventh_column"> 
+                <img src="img/download-button.svg" alt="atchive" class="note_icon" id="button_archive">
+                <img src="img/delete.svg" alt="delete" class="note_icon" id="button_delete">
+                <img src="img/edit.svg" alt="edit" class="note_icon" id="button_edit">
+            </td>
+        </tr>
+        <tr class="note">
+            <td class="first_column"><img src="img/cart.svg" alt="atchive" class="icon_background icon_item"></td>
+            <td class="name second_column">Books</td>
+            <td class="third_column">May 15, 2021</td>
+            <td class="fourth_column">Task</td>
+            <td class="fifth_column">The Learn Startup</td>
+            <td class="sixth_column"></td>
+            <td class="seventh_column"> 
+                <img src="img/download-button.svg" alt="atchive" class="note_icon" id="button_archive">
+                <img src="img/delete.svg" alt="delete" class="note_icon" id="button_delete">
+                <img src="img/edit.svg" alt="edit" class="note_icon" id="button_edit">
+            </td>
+        </tr>
+    </table>
+    <div class="button_setting">
+        <button class="creat_button">Creat notes</button>
+    </div>
+
+    <table class="sorted_notes">
+        <tr class="list_of_notes">
+            <th class="first_column_list"></th>
+            <th class="second_column_list">Note category</th>
+            <th class="third_column_list">Active</th>
+            <th class="fourth_column_list">Archived</th>
+        </tr>
+        <tr class="note">
+            <td class="first_column_list"><img src="img/cart.svg" alt="atchive" class="icon_background icon_item"></td>
+            <td class="name second_column_list">Task</td>
+            <td class="third_column_list">13</td>
+            <td class="fourth_column_list">4</td>
+        </tr>
+        <tr class="note">
+            <td class="first_column_list"><img src="img/mind-settings.svg" alt="atchive" class="icon_background icon_random_thought"></td>
+            <td class="name second_column_list">Random thought</td>
+            <td class="third_column_list">7</td>
+            <td class="fourth_column_list">12</td>
+         </tr>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
