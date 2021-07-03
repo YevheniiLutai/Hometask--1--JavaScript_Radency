@@ -211,13 +211,20 @@
                 </div>
                 <div class="note_name">
                     Name:
-                    <input name="name" type="text"></div>
+                    <input name="name" type="text">
+                </div>
                 <div class="note_dates">
-                    <p>Date:</p>
-                    <input name="date" type="date" min="" max=""></div>
+                    <p>Date start:</p>
+                    <input name="date" type="date" min="" max="" id="start" required pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                </div>
+                <div class="note_dates">
+                    <p>Date finish:</p>
+                    <input name="date_2" type="date" min="" max="" id="end" required pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                </div>
                 <div class="note_content">
                     Discription:
-                    <input name="context" type="text"></div>
+                    <input name="context" type="text">
+                </div>
                 <div class="note_category">
                     <p>Category:</p>
                 <select name="category">
@@ -228,7 +235,10 @@
                 </select>
                 <span id="close" class="close">&times;</span>
                 </div>
-                <input id="form-submit-button" type="submit" value="Sent">
+                <div class="note_button">
+                    <input id="form-submit-button" type="submit" value="Sent">
+                </div>
+                
             </form>
         </div>
     </div>

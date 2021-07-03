@@ -81,7 +81,7 @@ const creat_note = (item, index, archive) => {
                             <td class="third_column">${item.date}</td>
                             <td class="fourth_column">${item.category}</td>
                             <td class="fifth_column">${item.context}</td>
-                            <td class="sixth_column">${item.planDate}</td>
+                            <td class="sixth_column">${item.planDate}, ${item.planDate_2}</td>
                             <td class="seventh_column"> 
                                 <img src="img/edit.svg" alt="edit" class="note_icon ${classChange}" id="button_edit" onclick={modalEditorOpen(${index})}> 
                                 <img src="${archive_svg_icon}" alt="archive" class="note_icon" id="button_archive" onclick={changeArchiveStatus(${index},${archive})}>
@@ -182,6 +182,7 @@ modal_input_date.addEventListener("submit", (e) => {
     category: e.target.category.value,
     context: e.target.context.value,
     planDate: e.target.date.value,
+    planDate_2: e.target.date_2.value
   };
   list_of_notes.push(Note);
   modal_window_creat.style.display = "none";
@@ -278,4 +279,17 @@ archive_list_of_notes.forEach(
 );
 
 counter_active_archived(list_of_notes, archive_list_of_notes);
+//************************************************************//
+//********************* Date start/end validation ***********************//
+let start = document.getElementById('start');// start date
+let end = document.getElementById('end');// end date
+
+start.addEventListener('change', function() {
+    if (start.value)
+        end.min = start.value;
+}, false);
+end.addEventLiseter('change', function() {
+    if (end.value)
+        start.max = end.value;
+}, false);
 //************************************************************//
