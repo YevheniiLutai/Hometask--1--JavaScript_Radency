@@ -115,23 +115,27 @@
 /****************** update modal container size*******************/
 .edit_name {
     width: 20%;
+    margin-left: -40px;
 }
 
 .edit_title {
     width: 20%;
+    margin-left: -90px;
 }
 
 .edit_dates {
     width: 20%; 
-    margin-left: -600px;  
+    margin-left: -700px;  
 }
-
+.edit_dates_2 {
+    width: 20%;
+}
 .edit_discription {
     width: 20%;
 }
 
 .edit_button {
-    width: 20%;
+    width: 10%;
 }
 /*******************************************/
 

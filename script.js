@@ -200,15 +200,19 @@ const modalEditorFunc = (e, index) => {
   let newDate = e.target.date.value;
   let newName = e.target.name.value;
   let newContext = e.target.context.value;
-  newDate == ""
-    ? (note_modal_editor.style.display = "none")
-    : (list_of_notes[index].planDate = e.target.date.value);
-  newName == ""
-    ? (note_modal_editor.style.display = "none")
-    : (list_of_notes[index].name = e.target.name.value);
-  newContext == ""
-    ? (note_modal_editor.style.display = "none")
-    : (list_of_notes[index].context = e.target.context.value);
+  let newDate_2 = e.target.date_2.value
+    newDate == ""
+        ? (note_modal_editor.style.display = "none")
+        : (list_of_notes[index].planDate = e.target.date.value);
+    newDate_2 == ""
+        ? (note_modal_editor.style.display = "none")
+        : (list_of_notes[index].planDate_2 = e.target.date_2.value);
+    newName == ""
+        ? (note_modal_editor.style.display = "none")
+        : (list_of_notes[index].name = e.target.name.value);
+    newContext == ""
+        ? (note_modal_editor.style.display = "none")
+        : (list_of_notes[index].context = e.target.context.value);
   notes_print(list_with_note, list_of_notes, false);
   upload_from_storage ("list_of_notes", list_of_notes);
   note_modal_editor.style.display = "none";
@@ -281,8 +285,8 @@ archive_list_of_notes.forEach(
 counter_active_archived(list_of_notes, archive_list_of_notes);
 //************************************************************//
 //********************* Date start/end validation ***********************//
-let start = document.getElementById('start');// start date
-let end = document.getElementById('end');// end date
+let start = document.querySelector('#start');// start date
+let end = document.querySelector('#end');// end date
 
 start.addEventListener('change', function() {
     if (start.value)
