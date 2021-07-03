@@ -8,7 +8,7 @@
     <title>Hometask #1  JavaScript_Radency</title>
 </head>
 <body>
-   <!-- <div class="container">
+    <!-- <div class="container">
         <div class="notes">
             Name
             Created
@@ -60,7 +60,7 @@
             <td class="first_column">
                 <img src="img/cart.svg" alt="cart" class="icon_background icon_item">
             </td>
-            <td class="name second_column">Shopping list</td>
+            <td class="name second_column">Shopping list_of_notes</td>
             <td class="third_column">April 20, 2021</td>
             <td class="fourth_column">Task</td>
             <td class="fifth_column">Tamotes, bread</td>
@@ -126,6 +126,7 @@
 
 
     </div>  -->
+    <!-- header for tablet with all active notes-->
     <table class="notes_wrapper">
         <tr class="list_of_notes">
             <th class="first_column"></th>
@@ -139,12 +140,19 @@
                 <img src="img/delete_2.svg" alt="delete" class="icon_delete_2" id="button_delete_all">
             </th>
         </tr>
-       
     </table>
-    <div class="button_setting">
-        <button class="creat_button">Creat notes</button>
-    </div>
+    <!-- *************************************************** -->
+    <!-- list of all active notes-->
+    <table class="notes_content_list">
 
+    </table>
+    <!-- *************************************************** -->
+    <!-- button to open modal window for creat new note-->
+    <div class="button_setting">
+        <button class="creat_button" id="creat_button">Creat notes</button>
+    </div>
+    <!-- *************************************************** -->
+    <!-- list with counter active and archived notes, sorted by categories-->
     <table class="sorted_notes_wrapper">
         <tr class="list_of_notes">
             <th class="first_column_list"></th>
@@ -155,73 +163,104 @@
         <tr class="note">
             <td class="first_column_list"><img src="img/cart.svg" alt="cart" class="icon_background icon_item"></td>
             <td class="name second_column_list">Task</td>
-            <td class="third_column_list">13</td>
-            <td class="fourth_column_list">4</td>
+            <td class="third_column_list" id="cart_active"></td>
+            <td class="fourth_column_list" id="cart_archived"></td>
         </tr>
         <tr class="note">
             <td class="first_column_list"><img src="img/idea.svg" alt="idea" class="icon_background icon_idea"></td>
             <td class="name second_column_list">Idea</td>
-            <td class="third_column_list">7</td>
-            <td class="fourth_column_list">12</td>
+            <td class="third_column_list" id="idea_active"></td>
+            <td class="fourth_column_list" id="idea_archived"></td>
          </tr>
          <tr class="note">
             <td class="first_column_list"><img src="img/mind-settings.svg" alt="mind" class="icon_background icon_random_thought"></td>
             <td class="name second_column_list">Random thought</td>
-            <td class="third_column_list">7</td>
-            <td class="fourth_column_list">12</td>
+            <td class="third_column_list" id="random_thought_active"></td>
+            <td class="fourth_column_list" id="random_thought_archived"></td>
          </tr>
          <tr class="note">
             <td class="first_column_list"><img src="img/right-quote-sign.svg" alt="qoute" class="icon_background icon_quote"></td>
             <td class="name second_column_list">Quote</td>
-            <td class="third_column_list">7</td>
-            <td class="fourth_column_list">12</td>
+            <td class="third_column_list" id="quote_active"></td>
+            <td class="fourth_column_list" id="quote_archived"></td>
          </tr>
     </table>
-
+    <!-- *************************************************** -->
+    <!-- header for tablet with archived notes-->
     <table class="notes_archive">
-        <tr class="list_of_archived_notes">
-            <th class="notes_archive_title">Archived Notes</th>
+        <tr class="list_of_archived_notes" id="open_arcive_modal">
+            <th class="notes_archive_title ">Archived Notes</th>
             <th class="notes_archive_icon"> 
                 <img src="img/down-filled-triangular-arrow.svg" alt="arrow_down" class="archived_modal" id="open_arcive_modal">
             </th>
         </tr>
     </table>
-
+    <!-- *************************************************** -->
+    <!-- list of archived notes-->
+    <table class="notes_content_archived_list notes_content_archived_list_unactive">
+    
+        
+    </table>
+    <!-- *************************************************** -->
+    <!-- modal window with input for enter infor about note -->
     <div id="modal_menu_creat" class="modal_creat">
-        <div class="modal_creat_content">
-            <form id="input_data">
-                <p class="title_create">Введіть дані нотатки</p>
-                <div class="form-cont">
-                <p>Назва</p>
-                <input name="name" type="text"></div>
-                <div class="form-cont">
-                <p>Дату</p>
-                <input name="date" type="date" min="" max=""></div>
-                <div class="form-cont">
-                <p>Опис</p>
-               
-                <input name="context" type="text"></div>
-                <div class="form-cont">
+        <div class="modal_change_content">
+            <form id="input_data" class="note">
+                <div class="note_title">
+                    Enter info
+                </div>
+                <div class="note_name">
+                    Name:
+                    <input name="name" type="text"></div>
+                <div class="note_dates">
+                    <p>Date:</p>
+                    <input name="date" type="date" min="" max=""></div>
+                <div class="note_content">
+                    Discription:
+                    <input name="context" type="text"></div>
+                <div class="note_category">
+                    <p>Category:</p>
                 <select name="category">
                     <option value="Task">Task</option>
                     <option value="Random Thought">Random Thought</option>
                     <option value="Idea">Idea</option>
-
+                    <option value="Quote">Quote</option>
                 </select>
-            </div>
+                <span id="close" class="close">&times;</span>
+                </div>
                 <input id="form-submit-button" type="submit" value="Sent">
             </form>
-
-            <span id="close" class="close">&times;</span>
         </div>
-
-
-
-
-
-
-
     </div>
+    <!-- *************************************************** -->
+    <!-- modal window for update some informaion for active or archived notes-->
+    <div id="Change_modal" class="modal_creat">
+        <div class="modal_change_content">
+            <form id="modal_change_date" class="note">
+                <div class="modal_menu_1">
+                    <div class="edit_title">
+                        Update info
+                    </div>
+                    <div class="edit_name">
+                        Name:
+                        <input name="name" type="text"></div>
+                    </div>
+                    <div class="edit_dates">
+                        <p>Date:</p> 
+                        <input name="date" type="date" min="" max="">
+                    </div>
+                    <div class="edit_discription">
+                        Description:
+                        <input name="context" type="text"></div>
+                        <input type="submit" value="Sent">
+                        <span id="close_edit_modal" class="close">&times;</span>
+                    </div>
+                    
+                </div>   
+                             
+            </form>
+    </div>
+    <!-- *************************************************** -->
 
     <script src="script.js"></script>
 
